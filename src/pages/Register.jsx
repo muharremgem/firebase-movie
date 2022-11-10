@@ -18,7 +18,7 @@ const Register = () => {
   };
 
   return (
-    <div className="bggrandiant flex justify-center items-center">
+    <div className="bggrandiant flex justify-center items-center  ">
       <form onSubmit={handleSubmit} className="bgcontainer flex flex-col gap-5">
         <img
           className="flex mx-auto w-[8rem] lg-hidden"
