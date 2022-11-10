@@ -1,5 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+//import { Toaster } from "react-hot-toast";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_apiKey,
@@ -14,23 +20,36 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth();
 
-export const register = async (email,password) => {
-  try{
-    const {user}
+export const register = async (email, password, navigate) => {
+  try {
+    const { user } = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    navigate("/login");
+    return user;
+  } catch (error) {
+    //toast.error(error.message);
   }
-}
+};
 
+export const login = async (email, password, navigate) => {
+  try {
+    const { user } = await signInWithEmailAndPassword(auth, email, password);
+    navigate("/home");
+    return user;
+  } catch (error) {
+    //toast.error(error.message);
+    alert(error.message);
+  }
+};
 
-export const createUser = () => {
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // ..
-    });
+export const logOut = async (email, password) => {
+  try {
+    await signOut(auth);
+    return true;
+  } catch (error) {
+    //toast.error(error.message);
+  }
 };

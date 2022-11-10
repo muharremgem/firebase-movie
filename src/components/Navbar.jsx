@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,11 +11,17 @@ const Navbar = () => {
           width="50px"
           className="rounded-full"
         />
-        <select className="font-bold rounded-lg bg-orange-500 outline-none  mr-3 text-black">
-          <option>Login</option>
-          <option>Logout</option>
-          <option>Register</option>
-        </select>
+        <ul className="font-bold flex items-center gap-4">
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/register">register</Link>
+          </li>
+          <li>
+            <Link to="/login">Logout</Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
