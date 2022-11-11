@@ -8,7 +8,6 @@ const Navbar = () => {
       <div className="font-bold text-3xl flex gap-5">
         Movie APP <BiCameraMovie className="text-4xl" />
       </div>
-
       <div className="flex gap-5">
         <img
           src="https://cdn-icons-png.flaticon.com/512/295/295128.png"
