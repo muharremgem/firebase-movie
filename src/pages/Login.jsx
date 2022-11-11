@@ -13,7 +13,6 @@ const Login = () => {
     e.preventDefault();
     login(email, password, navigate);
   };
-
   return (
     <div className="bggrandiant flex justify-center items-center">
       <form onSubmit={handleSubmit} className="bgcontainer flex flex-col gap-5">
