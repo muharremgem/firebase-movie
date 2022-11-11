@@ -32,7 +32,6 @@ export const register = async (email, password, navigate) => {
     //toast.error(error.message);
   }
 };
-
 export const login = async (email, password, navigate) => {
   try {
     const { user } = await signInWithEmailAndPassword(auth, email, password);
