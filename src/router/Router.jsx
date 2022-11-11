@@ -4,7 +4,6 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MovieDetails from "../pages/MovieDetails";
 import Navbar from "../components/Navbar";
-
 const Router = () => {
   return (
     <BrowserRouter>
