@@ -16,7 +16,6 @@ const Register = () => {
     register(email, password, navigate);
     console.log(firstName, lastName);
   };
-
   return (
     <div className="bggrandiant flex justify-center items-center  ">
       <form onSubmit={handleSubmit} className="bgcontainer flex flex-col gap-5">
