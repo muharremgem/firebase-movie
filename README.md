@@ -3,7 +3,7 @@
 
   Project Name       |Libraries and Technologies I use     |How does my project look   
 :-------------------------|-------------------------|-------------------------
-[Recipe_App](https://react-recipe-app-muharremgem.vercel.app/)| Js React Tailwind | ![Task Tracker](recipe.gif)
+[firebase-movie-app](https://react-recipe-app-muharremgem.vercel.app/)| Js React Tailwind | ![movie-app](recipe.gif)
 
 
 
